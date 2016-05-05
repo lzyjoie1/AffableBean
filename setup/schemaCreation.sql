@@ -76,7 +76,7 @@ DROP TABLE IF EXISTS `affablebean`.`product` ;
 CREATE  TABLE IF NOT EXISTS `affablebean`.`product` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `name` VARCHAR(45) NOT NULL ,
-  `price` DECIMAL(5,2) NOT NULL ,
+  `price` DECIMAL(7,2) NOT NULL ,
 
   -- Delete after description is moved to resource bundle
   `description` TINYTEXT NULL ,

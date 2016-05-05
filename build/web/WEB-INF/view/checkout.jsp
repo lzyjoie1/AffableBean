@@ -11,7 +11,7 @@
 
 <%-- Set session-scoped variable to track the view user is coming from.
      This is used by the language mechanism in the Controller so that
-     users view the same page when switching between English and Czech. --%>
+     users view the same page when switching between English and Chinese. --%>
 <c:set var="view" value="/checkout" scope="session"/>
 
 
@@ -181,7 +181,7 @@
         <ul>
             <li><fmt:message key="nextDayGuarantee"/></li>
             <li><fmt:message key="deliveryFee1"/>
-                <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${initParam.deliverySurcharge}"/>
+                <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${initParam.deliverySurcharge}"/>
                 <fmt:message key="deliveryFee2"/></li>
         </ul>
 
@@ -189,17 +189,17 @@
             <tr>
                 <td><fmt:message key="subtotal"/>:</td>
                 <td class="checkoutPriceColumn">
-                    <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${cart.subtotal}"/></td>
+                    <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${cart.subtotal}"/></td>
             </tr>
             <tr>
                 <td><fmt:message key="surcharge"/>:</td>
                 <td class="checkoutPriceColumn">
-                    <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${initParam.deliverySurcharge}"/></td>
+                    <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${initParam.deliverySurcharge}"/></td>
             </tr>
             <tr>
                 <td class="total"><fmt:message key="total"/>:</td>
                 <td class="total checkoutPriceColumn">
-                    <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${cart.total}"/></td>
+                    <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${cart.total}"/></td>
             </tr>
         </table>
     </div>

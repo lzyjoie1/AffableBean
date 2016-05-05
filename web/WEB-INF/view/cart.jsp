@@ -11,7 +11,7 @@
 
 <%-- Set session-scoped variable to track the view user is coming from.
      This is used by the language mechanism in the Controller so that
-     users view the same page when switching between English and Czech. --%>
+     users view the same page when switching between English and Chinese. --%>
 <c:set var="view" value="/cart" scope="session"/>
 
 
@@ -68,7 +68,7 @@
     <c:if test="${!empty cart && cart.numberOfItems != 0}">
 
       <h4 id="subtotal"><fmt:message key="subtotal"/>:
-          <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${cart.subtotal}"/>
+          <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${cart.subtotal}"/>
       </h4>
 
       <table id="cartTable">
@@ -93,10 +93,10 @@
             <td><fmt:message key="${product.name}"/></td>
 
             <td>
-                <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${cartItem.total}"/>
+                <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${cartItem.total}"/>
                 <br>
                 <span class="smallText">(
-                    <fmt:formatNumber type="currency" currencySymbol="&euro; " value="${product.price}"/>
+                    <fmt:formatNumber type="currency" currencySymbol="&dollar; " value="${product.price}"/>
                     / <fmt:message key="unit"/> )</span>
             </td>
 

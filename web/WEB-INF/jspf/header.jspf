@@ -1,3 +1,4 @@
+c
 <%--
  * Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.
  *
@@ -73,7 +74,7 @@
                              render toggle according to browser's preferred locale --%>
                         <c:when test="${empty sessionScope['javax.servlet.jsp.jstl.fmt.locale.session']}">
                           <c:choose>
-                            <c:when test="${pageContext.request.locale.language ne 'cs'}">
+                            <c:when test="${pageContext.request.locale.language ne 'zh_CN'}">
                               english
                             </c:when>
                             <c:otherwise>
@@ -85,14 +86,14 @@
                           </c:choose> |
 
                           <c:choose>
-                            <c:when test="${pageContext.request.locale.language eq 'cs'}">
-                              česky
+                            <c:when test="${pageContext.request.locale.language eq 'zh_CN'}">
+                              简体中文
                             </c:when>
                             <c:otherwise>
                               <c:url var="url" value="chooseLanguage">
-                                <c:param name="language" value="cs"/>
+                                <c:param name="language" value="zh_CN"/>
                               </c:url>
-                              <div class="bubble"><a href="${url}">česky</a></div>
+                              <div class="bubble"><a href="${url}">简体中文</a></div>
                             </c:otherwise>
                           </c:choose>
                         </c:when>
@@ -100,7 +101,7 @@
                       <%-- Otherwise, render widget according to the set locale --%>
                         <c:otherwise>
                           <c:choose>
-                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] ne 'cs'}">
+                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] ne 'zh_CN'}">
                               english
                             </c:when>
                             <c:otherwise>
@@ -112,14 +113,14 @@
                           </c:choose> |
 
                           <c:choose>
-                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] eq 'cs'}">
-                              česky
+                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] eq 'zh_CN'}">
+                              简体中文
                             </c:when>
                             <c:otherwise>
                               <c:url var="url" value="chooseLanguage">
-                                <c:param name="language" value="cs"/>
+                                <c:param name="language" value="zh_CN"/>
                               </c:url>
-                              <div class="bubble"><a href="${url}">česky</a></div>
+                              <div class="bubble"><a href="${url}">简体中文</a></div>
                             </c:otherwise>
                           </c:choose>
                         </c:otherwise>
@@ -230,5 +231,5 @@
                     <img src="/AffableBean/img/logo.png" id="logo" alt="Affable Bean logo">
                 </a>
 
-                <img src="/AffableBean/img/logoText.png" id="logoText" alt="the affable bean">
+                <!--<img src="/AffableBean/img/logoText.png" id="logoText" alt="the affable bean">-->
             </div>
